@@ -22,7 +22,7 @@ pipeline {
     stage("Publish App to IIS") {
       steps {
         echo 'Publishin APP...'
-        bat 'dotnet publish -p:PublishProfile=IISProfile'
+        bat 'dotnet publish -p:PublishProfile=IISProfile .\devops-test\devops-test.sln'
       }
     }
   }
