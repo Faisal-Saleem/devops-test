@@ -34,6 +34,7 @@ pipeline {
 	echo 'Starting App on IIS...'
         bat 'C:\\Windows\\System32\\inetsrv\\appcmd.exe start apppool /apppool.name:testing'
 	echo 'App Started...'
+	echo 'Success...'
       }
     }
 
