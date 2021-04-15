@@ -16,21 +16,9 @@ pipeline {
     }
 
     stage('Build App') {
-      parallel {
-        stage('Build App') {
-          steps {
-            echo 'Builing App...'
-            bat 'dotnet build devops-test/devops-test.sln'
-          }
-        }
-
-        stage('') {
-          steps {
-            echo 'Test'
-            dotnetPublish(noBuild: true, outputDirectory: 'c:\\inetpu\\wwwroot\\testing')
-          }
-        }
-
+      steps {
+        echo 'Builing App...'
+        bat 'dotnet build devops-test/devops-test.sln'
       }
     }
 
