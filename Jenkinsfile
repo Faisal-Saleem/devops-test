@@ -23,7 +23,8 @@ pipeline {
       steps {
         echo 'Publishin APP...'
         bat 'C:\\Windows\\System32\\inetsrv\\appcmd.exe stop apppool /apppool.name:testing'
-        bat 'dotnet publish -p:PublishProfile=IISProfile devops-test/devops-test.sln'
+        bat 'dotnet publish devops-test/devops-test.sln -o c:\\inetpub\wwwroot\\testing\'
+        bat 'C:\\Windows\\System32\\inetsrv\\appcmd.exe start apppool /apppool.name:testing'
       }
     }
   }
