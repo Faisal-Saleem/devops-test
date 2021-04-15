@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>devops_test</RootNamespace>
+    <UserSecretsId>75c66d86-853e-46e1-963c-e46cf93e81dc</UserSecretsId>
   </PropertyGroup>
 
 </Project>
