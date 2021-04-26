@@ -47,6 +47,7 @@ namespace devops_test
 
 			app.UseAuthorization();
 
+			//test
 			app.UseEndpoints(endpoints =>
 			{
 				endpoints.MapRazorPages();
